@@ -1,0 +1,100 @@
+/* styles.css */
+
+/* Import Google Font: 16-bit pixel style */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  /* Forest Greens & Earth Tones */
+  --primary-start: #2e7d32;    /* deep pine */
+  --primary-end:   #81c784;    /* moss */
+  --accent:        #a5d6a7;    /* fern */
+  --bg:            #edf7ed;    /* pale leaf */
+  --card:          #ffffff;    /* clean white */
+  --text-dark:     #263238;    /* charcoal */
+  --text-light:    #fafafa;    /* off-white */
+  --shadow:        rgba(0, 0, 0, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply the 16-bit pixel font globally */
+body, h1, h2, p, li, code, a.button {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 12px;                     /* exact pixel size */
+    line-height: 2;                    /* avoid vertical distortion */
+    letter-spacing: -1px;                 /* no added spacing */
+    -webkit-font-smoothing: none;        /* disable subpixel AA on WebKit */
+    -moz-osx-font-smoothing: grayscale;  /* disable subpixel AA on macOS */
+    text-rendering: geometricPrecision;  /* sharpest glyph outlines */
+  }
+  
+
+body {
+  background: var(--bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-size: 0.8rem; /* ~16px equivalent */
+}
+
+header {
+  background: linear-gradient(135deg, var(--primary-start), var(--primary-end));
+  color: var(--text-light);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  font-weight: normal;
+}
+
+header p {
+  font-size: 0.7rem;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background: var(--card);
+  border-radius: 8px;
+  margin-bottom: 1.8rem;
+  padding: 1.8rem;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+
+section h2 {
+  color: var(--primary-start);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* Character portraits as crisp squares */
+#characters img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0;               /* remove circular mask */
+  border: 4px solid var(--accent);
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+#characters .characters {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+#characters figure {
